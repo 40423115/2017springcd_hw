@@ -305,7 +305,8 @@ make.start()</t>
 						
 </t>
 <t tx="yen.20170120110024.13">##課程內容
-</t>
+
+###大綱</t>
 <t tx="yen.20170120110024.14">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
