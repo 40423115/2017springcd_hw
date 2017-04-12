@@ -6,8 +6,11 @@ Slug: 2017 Week1
 Author: 40423115
 
 <!-- PELICAN_END_SUMMARY -->
-製作四連桿機構解說:
+概略介紹
 
+
+
+製作四連桿機構解說:
 
 1.
 <iframe src="https://player.vimeo.com/video/209584036" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
