@@ -67,6 +67,20 @@
 <v t="leo.20170412215139.9"><vh>iframe 導入影片</vh></v>
 </v>
 </v>
+<v t="leo.20170412223111.1"><vh>第三週</vh>
+<v t="leo.20170412223111.2"><vh>Week3</vh>
+<v t="leo.20170412223111.3"><vh>內容</vh></v>
+</v>
+<v t="leo.20170412223111.4"><vh>Week3-1</vh>
+<v t="leo.20170412223111.5"><vh>內容1</vh></v>
+</v>
+<v t="leo.20170412223111.6"><vh>Week3-2</vh>
+<v t="leo.20170412223111.7"><vh>內容2</vh></v>
+</v>
+<v t="leo.20170412223111.8"><vh>導入影片</vh>
+<v t="leo.20170412223111.9"><vh>iframe 導入影片</vh></v>
+</v>
+</v>
 </v>
 </v>
 </v>
@@ -75,6 +89,7 @@
 <v t="yen.20170108171733.71" a="E"><vh>@path content</vh>
 <v t="yen.20170123225841.1"><vh>@edit Week 1.md</vh></v>
 <v t="leo.20170412221239.1"><vh>@edit Week 2.md</vh></v>
+<v t="leo.20170412223140.1"><vh>@edit Week 3.md</vh></v>
 <v t="yen.20170108171733.81"><vh>@path pages</vh>
 <v t="yen.20170108171733.82"><vh>@edit pages_1.md</vh></v>
 </v>
@@ -220,6 +235,89 @@ make.start()
 						
 </t>
 <t tx="leo.20170412215139.9">## 使用 iframe 導入影片
+
+### 導入影片 template
+
+&lt;iframe src="https://player.vimeo.com/video/183950627" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+</t>
+<t tx="leo.20170412223111.1">&lt;section&gt;
+@others
+&lt;/section&gt;</t>
+<t tx="leo.20170412223111.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20170412223111.3">##課程內容
+
+###大綱</t>
+<t tx="leo.20170412223111.4">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20170412223111.5"></t>
+<t tx="leo.20170412223111.6">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20170412223111.7">## 利用 Markdown 寫投影片
+以下利用 Markdown 格式展示 Python 程式碼:
+```
+@language python
+# use threading and subprocess to threading the make process
+import os
+import subprocess
+import threading
+
+def domake():
+    
+    path = "../exposed/api/exposed"
+    ubuntu = "../Ubuntu"
+    
+    # create obj path
+    
+    if not os.path.exists(path+"/../obj"):
+        os.makedirs(path+"/../obj")
+    
+    subprocess.call(["make", "clean"], cwd=path)
+    subprocess.call("make", cwd=path)
+    subprocess.call(["cp", "{libslvs.so, _slvs.so, slvs.py}", ubuntu], cwd=path)
+    subprocess.call(["python3", "circle_ex.py"], cwd=path+"/"+ubuntu)
+    
+make = threading.Thread(target=domake)
+make.start()
+```
+</t>
+<t tx="leo.20170412223111.8">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170412223111.9">## 使用 iframe 導入影片
 
 ### 導入影片 template
 
