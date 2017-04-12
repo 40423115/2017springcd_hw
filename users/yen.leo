@@ -39,18 +39,32 @@
 <v t="yen.20170120110024.9" a="E"><vh>快捷鍵</vh>
 <v t="yen.20170120110024.10"><vh>投影片快捷鍵</vh></v>
 </v>
-<v t="yen.20170120110024.11" a="E"><vh>各式內容引用範例</vh>
-<v t="yen.20170120110024.12" a="E"><vh>Week1</vh>
+<v t="yen.20170120110024.11"><vh>第一週</vh>
+<v t="yen.20170120110024.12"><vh>Week1</vh>
 <v t="yen.20170120110024.13"><vh>內容</vh></v>
 </v>
-<v t="yen.20170120110024.14" a="E"><vh>Week1-1</vh>
+<v t="yen.20170120110024.14"><vh>Week1-1</vh>
 <v t="yen.20170120110024.15"><vh>內容1</vh></v>
 </v>
-<v t="leo.20170308173636.1" a="E"><vh>Week1-2</vh>
+<v t="leo.20170308173636.1"><vh>Week1-2</vh>
 <v t="leo.20170308173636.2"><vh>內容2</vh></v>
 </v>
 <v t="yen.20170120110024.16" a="E"><vh>導入影片</vh>
 <v t="yen.20170120110024.17"><vh>iframe 導入影片</vh></v>
+</v>
+</v>
+<v t="leo.20170412215139.1"><vh>第二週</vh>
+<v t="leo.20170412215139.2"><vh>Week2</vh>
+<v t="leo.20170412215139.3"><vh>內容</vh></v>
+</v>
+<v t="leo.20170412215139.4"><vh>Week2-1</vh>
+<v t="leo.20170412215139.5"><vh>內容1</vh></v>
+</v>
+<v t="leo.20170412215139.6"><vh>Week2-2</vh>
+<v t="leo.20170412215139.7"><vh>內容2</vh></v>
+</v>
+<v t="leo.20170412215139.8"><vh>導入影片</vh>
+<v t="leo.20170412215139.9"><vh>iframe 導入影片</vh></v>
 </v>
 </v>
 </v>
@@ -59,7 +73,8 @@
 </v>
 </v>
 <v t="yen.20170108171733.71" a="E"><vh>@path content</vh>
-<v t="yen.20170123225841.1"><vh>@edit 20170108.md</vh></v>
+<v t="yen.20170123225841.1"><vh>@edit Week 1.md</vh></v>
+<v t="leo.20170412221239.1"><vh>@edit Week 2.md</vh></v>
 <v t="yen.20170108171733.81"><vh>@path pages</vh>
 <v t="yen.20170108171733.82"><vh>@edit pages_1.md</vh></v>
 </v>
@@ -126,6 +141,89 @@ def domake():
 make = threading.Thread(target=domake)
 make.start()
 ```
+</t>
+<t tx="leo.20170412215139.1">&lt;section&gt;
+@others
+&lt;/section&gt;</t>
+<t tx="leo.20170412215139.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20170412215139.3">##課程內容
+
+###大綱</t>
+<t tx="leo.20170412215139.4">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20170412215139.5"></t>
+<t tx="leo.20170412215139.6">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="leo.20170412215139.7">## 利用 Markdown 寫投影片
+以下利用 Markdown 格式展示 Python 程式碼:
+```
+@language python
+# use threading and subprocess to threading the make process
+import os
+import subprocess
+import threading
+
+def domake():
+    
+    path = "../exposed/api/exposed"
+    ubuntu = "../Ubuntu"
+    
+    # create obj path
+    
+    if not os.path.exists(path+"/../obj"):
+        os.makedirs(path+"/../obj")
+    
+    subprocess.call(["make", "clean"], cwd=path)
+    subprocess.call("make", cwd=path)
+    subprocess.call(["cp", "{libslvs.so, _slvs.so, slvs.py}", ubuntu], cwd=path)
+    subprocess.call(["python3", "circle_ex.py"], cwd=path+"/"+ubuntu)
+    
+make = threading.Thread(target=domake)
+make.start()
+```
+</t>
+<t tx="leo.20170412215139.8">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170412215139.9">## 使用 iframe 導入影片
+
+### 導入影片 template
+
+&lt;iframe src="https://player.vimeo.com/video/183950627" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 </t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
