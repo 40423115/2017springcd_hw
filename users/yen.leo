@@ -105,6 +105,11 @@
 <v t="leo.20170412221239.1"><vh>@edit Week 2.md</vh></v>
 <v t="leo.20170412223140.1"><vh>@edit Week 3.md</vh></v>
 <v t="leo.20170412223418.1"><vh>@edit Week 4.md</vh></v>
+<v t="leo.20170427001507.1"><vh>@edit Week 5.md</vh></v>
+<v t="leo.20170427001535.1"><vh>@edit Week 6.md</vh></v>
+<v t="leo.20170427001537.1"><vh>@edit Week 7.md</vh></v>
+<v t="leo.20170427001538.1"><vh>@edit Week 8.md</vh></v>
+<v t="leo.20170427001651.1"><vh>@edit Week 9.md</vh></v>
 <v t="yen.20170108171733.81"><vh>@path pages</vh>
 <v t="yen.20170108171733.82"><vh>@edit pages_1.md</vh></v>
 </v>
